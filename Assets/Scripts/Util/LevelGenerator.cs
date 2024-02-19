@@ -418,7 +418,16 @@ public class LevelGenerator : MonoBehaviour {
 
 			Room room = null;
             ExitConstraint requiredExits = new ExitConstraint();
-			if (roomToSpawn.name == "Start") {
+			
+            
+            // if (roomToSpawn == null)
+            // {
+	           //  Debug.Log("roomToSpawn is null");
+	           //  return;
+            // }
+            
+            
+            if (roomToSpawn.name == "Start") {
                 requiredExits.addDirConstraint(exitDir);
                 room = Room.generateRoom(roomToSpawn, this, currentRoomX, currentRoomY, requiredExits);
 				GameManager.instance.currentRoom = room;
