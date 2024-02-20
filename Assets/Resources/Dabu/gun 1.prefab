@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d3c974ae5fedb4868b4997c3bf4eb589, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 756047025e51ab6479ee5c3df7886f15, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -174,7 +174,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 63fa6ac6708764c3b98b7f0295c1792b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -240,11 +240,11 @@ MonoBehaviour:
   heldAngle: 0
   tileWereHolding: {fileID: 0}
   aimDirection: {x: 0, y: 0}
-  bulletPrefab: {fileID: 1838362062477336, guid: 5c4e89998a1ba414b923d44895d1a47e,
+  bulletPrefab: {fileID: 1838362062477336, guid: 7db8cc660f436194cb03dd4067248311,
     type: 3}
   muzzleFlashObj: {fileID: 1554892693995942}
   recoilForce: 400
-  shootForce: 1000
+  shootForce: 100
   cooldownTime: 0.1
 --- !u!61 &61304914532229252
 BoxCollider2D:

@@ -45,10 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomAuthor: Dabu1
-  designedRoomFile: {fileID: 4900000, guid: d96c815d5ea9cc34fae8116879c509df, type: 3}
+  designedRoomFile: {fileID: 4900000, guid: 3b1195154fdee544d8c4c4fed453bd82, type: 3}
   localTilePrefabs:
-  - {fileID: 3796714593158699834, guid: 468aabec988ef3c4db333df23bcf96a7, type: 3}
-  - {fileID: 3796714593158699834, guid: 468aabec988ef3c4db333df23bcf96a7, type: 3}
+  - {fileID: 1614338125090674, guid: f0a42b4403523594990b06c8aefa42d4, type: 3}
+  - {fileID: 1781302445510578, guid: 482e08c8465603844926fa97198fa045, type: 3}
+  - {fileID: 1614338125090674, guid: 1cd08320713eb594a9a32254bfff7113, type: 3}
+  - {fileID: 1781302445510578, guid: f2f411e5d29bea74f910919740056a5f, type: 3}
+  - {fileID: 1403095745553274, guid: 88c237f155416be49ab32534e58ba249, type: 3}
   - {fileID: 3796714593158699834, guid: 468aabec988ef3c4db333df23bcf96a7, type: 3}
   roomGridX: 0
   roomGridY: 0

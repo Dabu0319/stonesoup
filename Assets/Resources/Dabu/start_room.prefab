@@ -47,11 +47,11 @@ MonoBehaviour:
   roomAuthor: Dabu
   designedRoomFile: {fileID: 4900000, guid: d96c815d5ea9cc34fae8116879c509df, type: 3}
   localTilePrefabs:
-  - {fileID: 1312951893184288, guid: 152bb52211a70984cb7cc5ffd517948d, type: 3}
-  - {fileID: 1614338125090674, guid: f0a42b4403523594990b06c8aefa42d4, type: 3}
   - {fileID: 6564620135882966768, guid: caee770ce6a71fe499ab1d07d6253bf4, type: 3}
-  - {fileID: 1224687453642000, guid: cc78adaed065d804bb32841c7b4931c0, type: 3}
-  - {fileID: 1403095745553274, guid: 88c237f155416be49ab32534e58ba249, type: 3}
+  - {fileID: 1781302445510578, guid: f2f411e5d29bea74f910919740056a5f, type: 3}
+  - {fileID: 1781302445510578, guid: f2f411e5d29bea74f910919740056a5f, type: 3}
+  - {fileID: 1781302445510578, guid: 482e08c8465603844926fa97198fa045, type: 3}
+  - {fileID: 1781302445510578, guid: 482e08c8465603844926fa97198fa045, type: 3}
   roomGridX: 0
   roomGridY: 0
   pickUpTest: {fileID: 0}

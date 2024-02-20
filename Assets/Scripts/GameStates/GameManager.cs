@@ -156,8 +156,14 @@ public class GameManager : MonoBehaviour {
 		// Start by making the player and tile that killed the player not children of the rooms
 		Player.instance.transform.parent = transform;
 		tileThatKilledPlayer.transform.parent = transform;
+		
+		
 		tileThatKilledPlayer.transform.localPosition = new Vector3(tileThatKilledPlayer.transform.localPosition.x, tileThatKilledPlayer.transform.localPosition.y, Player.instance.transform.localPosition.z-0.1f);
-		borderObjects.SetActive(false);
+		
+		
+		//borderObjects.SetActive(false);
+		
+		
 		StartCoroutine(playerDefeatedSequence());
 	}
 
