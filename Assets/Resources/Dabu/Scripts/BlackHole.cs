@@ -30,6 +30,12 @@ public class BlackHole : MonoBehaviour
                 {
                     tile.enabled = false;
                 }
+
+                if (tile.hasTag(TileTags.Player))
+                {
+                    tile.enabled = false;
+                    //tile.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                }
                 
                 Rigidbody2D rb = tile.GetComponent<Rigidbody2D>();
 

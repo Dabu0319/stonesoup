@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8380519417839478099}
-  - component: {fileID: -8924445141341661760}
+  - component: {fileID: -5346686069090551301}
   m_Layer: 0
-  m_Name: start_room
+  m_Name: room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-8924445141341661760
+--- !u!114 &-5346686069090551301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,18 +41,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3612889683546413559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ac3571283a4f74d8c923f489d8abc8, type: 3}
+  m_Script: {fileID: 11500000, guid: 97b032c094166194e8af5b1e325e1362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomAuthor: Dabu
   designedRoomFile: {fileID: 4900000, guid: d96c815d5ea9cc34fae8116879c509df, type: 3}
   localTilePrefabs:
-  - {fileID: 6564620135882966768, guid: caee770ce6a71fe499ab1d07d6253bf4, type: 3}
-  - {fileID: 1781302445510578, guid: f2f411e5d29bea74f910919740056a5f, type: 3}
-  - {fileID: 1781302445510578, guid: f2f411e5d29bea74f910919740056a5f, type: 3}
-  - {fileID: 1781302445510578, guid: 482e08c8465603844926fa97198fa045, type: 3}
-  - {fileID: 1781302445510578, guid: 482e08c8465603844926fa97198fa045, type: 3}
+  - {fileID: 1614338125090674, guid: bef9776ad8238a44d89a71d4df751b04, type: 3}
+  - {fileID: 1614338125090674, guid: bef9776ad8238a44d89a71d4df751b04, type: 3}
+  - {fileID: 1614338125090674, guid: bef9776ad8238a44d89a71d4df751b04, type: 3}
+  - {fileID: 1614338125090674, guid: bef9776ad8238a44d89a71d4df751b04, type: 3}
   roomGridX: 0
   roomGridY: 0
-  pickUpTest: {fileID: 0}
-  apt283Shield: {fileID: 0}

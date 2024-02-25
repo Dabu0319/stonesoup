@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3612889683546413559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8380519417839478099}
+  - component: {fileID: -8924445141341661760}
+  m_Layer: 0
+  m_Name: start_room_old
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8380519417839478099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3612889683546413559}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-8924445141341661760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3612889683546413559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ac3571283a4f74d8c923f489d8abc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomAuthor: Dabu
+  designedRoomFile: {fileID: 4900000, guid: d96c815d5ea9cc34fae8116879c509df, type: 3}
+  localTilePrefabs:
+  - {fileID: 6564620135882966768, guid: caee770ce6a71fe499ab1d07d6253bf4, type: 3}
+  - {fileID: 1781302445510578, guid: f2f411e5d29bea74f910919740056a5f, type: 3}
+  - {fileID: 1781302445510578, guid: f2f411e5d29bea74f910919740056a5f, type: 3}
+  - {fileID: 1781302445510578, guid: 482e08c8465603844926fa97198fa045, type: 3}
+  - {fileID: 1781302445510578, guid: 482e08c8465603844926fa97198fa045, type: 3}
+  roomGridX: 0
+  roomGridY: 0
+  pickUpTest: {fileID: 0}
+  apt283Shield: {fileID: 0}
