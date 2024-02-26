@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChameleonCloak : Tile
 {
+    public bool cloakActive = true;
+    
     public bool isCloaked = false;
     private Vector3 lastPosition;
     private float stationaryTime = 0f;
@@ -17,6 +19,14 @@ public class ChameleonCloak : Tile
 
     void Update()
     {
+
+        if (!cloakActive)
+        {
+            DeactivateCloak();
+            return;
+        }
+        
+        
         // Check if the player has moved
         if (transform.position == lastPosition)
         {
@@ -90,11 +100,11 @@ public class ChameleonCloak : Tile
             //enemy.tileWereChasing = null;
             enemy.maxDistanceToContinueChase = 0;
             
-            Debug.Log(enemy.name);
+            //Debug.Log(enemy.name);
             
         }
         
-        Debug.Log("Cleared enemy vision");
+        //Debug.Log("Cleared enemy vision");
     }
     
     void RecoverEnemyVision()
@@ -108,6 +118,6 @@ public class ChameleonCloak : Tile
             
         }
         
-        Debug.Log("Recovered enemy vision");
+        // Debug.Log("Recovered enemy vision");
     }
 }

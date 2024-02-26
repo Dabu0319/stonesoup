@@ -2,22 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlackHole : MonoBehaviour
+public class BlackHoleTile : Tile
 {
-    public float attractionRadius = 5f; // 
-    public float pullForce = 20f; // 
+    public float attractionRadius = 1f;
+    public float pullForce = 50f;
+    public float radiusGrowthRate = 0.5f;
+    public float scaleGrowthRate = 0.5f;
 
+    public float destroyDis = 1f;
+    
     
     private List<BoxCollider2D> modifiedColliders = new List<BoxCollider2D>();
+
     void Update()
     {
-        // detect all tiles within the attraction radius and apply a force to them
+        attractionRadius += radiusGrowthRate * Time.deltaTime;
+        transform.localScale += new Vector3(scaleGrowthRate, scaleGrowthRate, 0) * Time.deltaTime;
+        destroyDis += scaleGrowthRate/4 * Time.deltaTime;
+
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, attractionRadius);
-        
-        
-        
-        
-        
         foreach (Collider2D hit in hits)
         {
             Tile tile = hit.GetComponent<Tile>();
@@ -63,47 +66,21 @@ public class BlackHole : MonoBehaviour
                     rb.AddForce(direction * forceMagnitude, ForceMode2D.Force);
                 
 
-                // detect if the tile is close enough to be destroyed
-                if (Vector2.Distance(tile.transform.position, transform.position) < 1f)
-                {
-                    tile.takeDamage(Player.instance , 100);
-                    Debug.Log("Tile: " + tile);
-                    Destroy(tile.gameObject);
-                }
+                    if (tile != this && !tile.GetComponent<BlackHoleTile>() && Vector2.Distance(tile.transform.position, transform.position) < destroyDis)
+                    {
+                        tile.takeDamage(Player.instance, 100); 
+                        Debug.Log("Destroying Tile: " + tile);
+                        Destroy(tile.gameObject);
+                    }
             }
         }
+
     }
 
-    void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
-        
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attractionRadius);
+        // 使用Gizmos在Unity编辑器中绘制表示吸引半径的圆圈
+        Gizmos.color = Color.red; // 设置Gizmos颜色为红色
+        Gizmos.DrawWireSphere(transform.position, attractionRadius); // 绘制圆圈
     }
-    
-    
-    void OnDestroy()
-    {
-        
-        foreach (BoxCollider2D collider in modifiedColliders)
-        {
-            if (collider != null) {
-                collider.isTrigger = false;
-            }
-
-            if (GetComponent<Rigidbody2D>() != null)
-            {
-                //set velocity to zero
-                GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            }
-            
-            //enable the tile
-            Tile tile = collider.GetComponent<Tile>();
-            if (tile != null)
-            {
-                tile.enabled = true;
-            }
-
-        }
-    }
-}
+} 

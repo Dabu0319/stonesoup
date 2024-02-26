@@ -658,7 +658,6 @@ GameObject:
   m_Component:
   - component: {fileID: 646884587}
   - component: {fileID: 646884586}
-  - component: {fileID: 646884584}
   - component: {fileID: 646884583}
   m_Layer: 0
   m_Name: Main Camera
@@ -669,14 +668,6 @@ GameObject:
   m_IsActive: 1
 --- !u!81 &646884583
 AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 646884582}
-  m_Enabled: 1
---- !u!124 &646884584
-Behaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1120,6 +1111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allContributorIDs:
+  - Dabu4
+  - Dabu3
+  - Dabu2
   - Dabu
   - Dabu1
   - Josh
