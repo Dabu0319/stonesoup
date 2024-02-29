@@ -1111,6 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allContributorIDs:
+  - DabuRM
   - Dabu4
   - Dabu3
   - Dabu2
