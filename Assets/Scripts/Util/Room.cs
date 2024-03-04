@@ -92,6 +92,18 @@ public class Room : MonoBehaviour {
 			}
 		}
 		
+		// Debug.Log("Debugging indexGrid structure:");
+		// for (int j = 0; j < height; j++) {
+		// 	string line = "";
+		// 	for (int i = 0; i < width; i++) {
+		// 		line += indexGrid[i, j].ToString() + " ";
+		// 	}
+		// 	Debug.Log(line);
+		// }
+		//
+		
+		
+		
 		for (int i = 0; i < width; i++) {
 			for (int j = 0; j < height; j++) {
 				int tileIndex = indexGrid[i, j];
@@ -110,6 +122,34 @@ public class Room : MonoBehaviour {
 		}
 
 
+	}
+    
+	public  int[,] LoadIndexGrid()
+	{
+		string initialGridString = designedRoomFile.text;
+		string[] rows = initialGridString.Trim().Split('\n');
+		int width = rows[0].Trim().Split(',').Length;
+		int height = rows.Length;
+		if (height != LevelGenerator.ROOM_HEIGHT)
+		{
+			throw new UnityException(string.Format("Error in room by {0}. Wrong height, Expected: {1}, Got: {2}", roomAuthor, LevelGenerator.ROOM_HEIGHT, height));
+		}
+		if (width != LevelGenerator.ROOM_WIDTH)
+		{
+			throw new UnityException(string.Format("Error in room by {0}. Wrong width, Expected: {1}, Got: {2}", roomAuthor, LevelGenerator.ROOM_WIDTH, width));
+		}
+		int[,] indexGrid = new int[width, height];
+		for (int r = 0; r < height; r++)
+		{
+			string row = rows[height - r - 1];
+			string[] cols = row.Trim().Split(',');
+			for (int c = 0; c < width; c++)
+			{
+				indexGrid[c, r] = int.Parse(cols[c]);
+				
+			}
+		}
+		return indexGrid;
 	}
 
 }

@@ -9,8 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3697118840801849162}
-  - component: {fileID: 5597883656620226564}
-  - component: {fileID: 5655038278852634612}
+  - component: {fileID: -4744472125252241133}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -33,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5597883656620226564
+--- !u!114 &-4744472125252241133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,33 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3274537781222816223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcb352037fbad8242a3e6ecb6bb80a52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5655038278852634612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3274537781222816223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f0220adcb93854eafecf1e29686778, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b9c611a08d1cfb4bbc72ab2bc6a473d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   roomAuthor: DabuRM
-  designedRoomFile: {fileID: 4900000, guid: d742707e9923eb047af5d9c2da173375, type: 3}
+  designedRoomFile: {fileID: 0}
   localTilePrefabs: []
   roomGridX: 0
   roomGridY: 0
-  hasUpExit: 1
-  hasDownExit: 1
-  hasLeftExit: 1
-  hasRightExit: 1
-  hasLeftToUpPath: 1
-  hasLeftToDownPath: 1
-  hasLeftToRightPath: 1
-  hasRightToUpPath: 1
-  hasRightToDownPath: 1
-  hasUpToDownPath: 1
