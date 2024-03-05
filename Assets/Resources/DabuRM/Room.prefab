@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3697118840801849162}
-  - component: {fileID: -4744472125252241133}
+  - component: {fileID: -7116066176507871881}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4744472125252241133
+--- !u!114 &-7116066176507871881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,8 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9c611a08d1cfb4bbc72ab2bc6a473d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomAuthor: DabuRM
+  roomAuthor: RoomRM
   designedRoomFile: {fileID: 0}
   localTilePrefabs: []
   roomGridX: 0
   roomGridY: 0
+  enemyPrefabs:
+  - {fileID: 4219497713546613681, guid: 660d062b648fb1f41a39bf99b824104f, type: 3}
+  - {fileID: 1781302445510578, guid: 26bd896ca6fd334489b36fed1f37ebc9, type: 3}
+  - {fileID: 1781302445510578, guid: f2f411e5d29bea74f910919740056a5f, type: 3}
+  - {fileID: 9130781745665530758, guid: a55c479bb05dda748af5c9e7309381c0, type: 3}
+  - {fileID: 9130781745665530758, guid: caffa2b5f8e47d84a820083d9a5c9b9b, type: 3}
+  itemPrefabs:
+  - {fileID: 6564620135882966768, guid: caee770ce6a71fe499ab1d07d6253bf4, type: 3}
+  - {fileID: 1614338125090674, guid: f0a42b4403523594990b06c8aefa42d4, type: 3}
+  extraWallsToRemove: 0

@@ -1,9 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomGenerator : Room {
     
+    public List<GameObject> enemyPrefabs;
+    public List<GameObject> itemPrefabs;
+    
+    private HashSet<Vector2> itemPlacedPositions = new HashSet<Vector2>();
+    private HashSet<Vector2> enemyPlacedPositions = new HashSet<Vector2>();
     	public class SearchVertex {
 		public Vector2 gridPos;
 		public SearchVertex parent;
@@ -15,6 +19,25 @@ public class RoomGenerator : Room {
 	protected static List<SearchVertex> _closed = new List<SearchVertex>(80);
 
 	public int extraWallsToRemove = 0;
+
+	protected void SpawnRandomEnemy(Vector2 position) {
+		if (enemyPrefabs.Count > 0 && !enemyPlacedPositions.Contains(position)) {
+			int index = Random.Range(0, enemyPrefabs.Count);
+			GameObject enemyPrefab = enemyPrefabs[index];
+			Tile.spawnTile(enemyPrefab, transform, (int)position.x, (int)position.y);
+			enemyPlacedPositions.Add(position);
+		}
+	}
+	protected void SpawnRandomItem(Vector2 position) {
+		// 检查该位置是否已经放置过物品
+		if (itemPrefabs.Count > 0 && !itemPlacedPositions.Contains(position)) {
+			int index = Random.Range(0, itemPrefabs.Count);
+			GameObject itemPrefab = itemPrefabs[index];
+			Tile.spawnTile(itemPrefab, transform, (int)position.x, (int)position.y);
+			// 记录已放置物品的位置
+			itemPlacedPositions.Add(position);
+		}
+	}
 
 	protected bool listContainsVertex(List<SearchVertex> list, Vector2 gridPos) {
 		foreach (SearchVertex vertex in list) {
@@ -139,6 +162,32 @@ public class RoomGenerator : Room {
 
 				wallMap[currentX, currentY] = false;
 			}
+			
+			if (vertex.isDeadEnd) {
+				if (Random.value < 0.3f)
+				{
+					SpawnRandomItem(vertex.gridPos);
+				}
+				
+			}
+		}
+		
+		foreach (SearchVertex vertex in _closed) {
+			// 其他逻辑...
+        
+			// 检查是否需要在转弯处放置敌人
+			if (vertex.parent != null && vertex.parent.parent != null) {
+				Vector2 directionToParent = (vertex.gridPos - vertex.parent.gridPos).normalized;
+				Vector2 directionToGrandparent = (vertex.parent.gridPos - vertex.parent.parent.gridPos).normalized;
+				if (directionToParent != directionToGrandparent) {
+					// 方向发生变化，有一定几率放置敌人
+					if (Random.value < 0.1f) { // 假设有50%的几率放置敌人
+						SpawnRandomEnemy(vertex.gridPos);
+					}
+				}
+			}
+        
+			
 		}
 
 		// Now we remove some extra walls

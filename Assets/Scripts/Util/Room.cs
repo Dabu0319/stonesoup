@@ -124,7 +124,7 @@ public class Room : MonoBehaviour {
 
 	}
     
-	public  int[,] LoadIndexGrid()
+	public virtual int[,] LoadIndexGrid()
 	{
 		string initialGridString = designedRoomFile.text;
 		string[] rows = initialGridString.Trim().Split('\n');
