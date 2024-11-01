@@ -47,8 +47,8 @@ MonoBehaviour:
   roomAuthor: Dabu1
   designedRoomFile: {fileID: 4900000, guid: 3b1195154fdee544d8c4c4fed453bd82, type: 3}
   localTilePrefabs:
-  - {fileID: 1614338125090674, guid: f0a42b4403523594990b06c8aefa42d4, type: 3}
-  - {fileID: 1781302445510578, guid: 482e08c8465603844926fa97198fa045, type: 3}
+  - {fileID: 1516122876482116, guid: 122d73bcdf78faf449b1336baded08a1, type: 3}
+  - {fileID: 6808504206639141406, guid: bbfbb7ac3710901419e0ce7e9bcbb311, type: 3}
   - {fileID: 1614338125090674, guid: 1cd08320713eb594a9a32254bfff7113, type: 3}
   - {fileID: 1781302445510578, guid: f2f411e5d29bea74f910919740056a5f, type: 3}
   - {fileID: 1403095745553274, guid: 88c237f155416be49ab32534e58ba249, type: 3}
